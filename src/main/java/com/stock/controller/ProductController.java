@@ -42,4 +42,9 @@ public class ProductController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/id/{id}")
+    public ResponseEntity<Product> findById(@PathVariable Long id){
+        return  ResponseEntity.ok().body(service.findById(id));
+    }
+
 }

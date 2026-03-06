@@ -1,6 +1,7 @@
 package com.stock.model.entity;
 
 
+import com.stock.enums.Movement;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -26,7 +27,6 @@ public class Product{
     @NotBlank
     private String name;
 
-
     private BigDecimal price;
 
     @NotNull
@@ -46,5 +46,4 @@ public class Product{
 
     @OneToOne
     private Category category;
-
 }

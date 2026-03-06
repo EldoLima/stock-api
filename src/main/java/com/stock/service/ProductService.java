@@ -19,6 +19,9 @@ public class ProductService {
     public List<Product> findAll(){
         return repository.findAll();
     }
+    public Product findById(Long id){
+        return repository.findById(id).orElseThrow();
+    }
 
     public Product save(Product product){
        return repository.save(product);
@@ -41,7 +44,6 @@ public class ProductService {
     @Transactional
     public void delete(Long id){
         Product product1 = repository.findById(id).orElseThrow();
-
         repository.delete(product1);
 
     }
