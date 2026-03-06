@@ -1,0 +1,4 @@
+package com.stock.repository;
+
+public class CategoryRepository {
+}
